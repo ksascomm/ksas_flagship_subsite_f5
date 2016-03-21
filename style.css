@@ -1,0 +1,187 @@
+/*
+Theme Name: 	Flagship Sub-site Foundation 5
+Description: 	For subsites of krieger.jhu.edu that require the global navigation (ie. DURA, Woodrow Wilson, SDS, etc.)
+Author: 		Cara Peckens
+Author URI: 	http://krieger.jhu.edu/communications/web
+Template: 		ksas_flagship_f5
+Version: 		2.0
+*/
+
+body.home h1, body.home h2, body.home h3, body.home h4, .isotope h3 {
+	color: #3478b6;
+}
+
+ul.nav li:before {
+	content: "\e010";
+	font-family:  'flagship';
+	color: #999;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+ul.nav li ul li:before {
+	content: "\e010";
+	font-family:  'flagship';
+	color: #999;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+ul.nav li ul.sub-menu {
+	list-style: none;
+	margin-left: 0;
+}
+
+body.sub-site ul.nav li ul li {
+	border-top:none;
+	padding-left: 26px;
+	padding-bottom: 0px;
+}
+
+.links_list a {
+	color: #333;
+}
+
+.links_list ul {
+	margin-left: 20px;
+}
+
+span.attribute {
+	margin-right: 25px;
+}
+
+#caption {
+	min-height: 425px;
+	position: absolute;
+	bottom:0;
+	width: 34%;
+}
+
+.slide summary {
+	background: rgb(0,0,0);
+	background: rgba(0,0,0,.9);
+}
+
+.slide h6 {
+	color: #dbb003;
+	font-size: 100%;
+}
+
+.orbit div.orbit-slide {
+	left:0 !important;
+}
+
+.middle {
+	vertical-align: middle;
+	margin-top: 25%;
+}
+
+body.sub-site .orbit-wrapper {
+	-webkit-border-top-right-radius: 	10px;
+	-moz-border-radius-topright: 		10px;
+	border-top-right-radius: 			10px;
+	-webkit-border-top-left-radius: 	10px;
+	-moz-border-radius-topleft: 		10px;
+	border-top-left-radius: 			10px;
+	min-height: 35px;
+	height: 400px !important;
+}
+
+section ul {
+	margin-left: 50px;
+}
+
+section ul ul{
+	margin-left: 25px;
+}
+
+#directory {
+	margin-left: 0;
+}
+
+#directory p {
+	margin-top: 15px;
+}
+
+section .panel ul {
+	margin-left: 0;
+}
+
+ul.breadcrumbs {
+	background: none;
+	padding:0;
+	border:none;
+}
+
+ul.breadcrumbs a{
+	color: #666;
+}
+
+
+.lt-ie9 .offset-top {
+	margin-top: 0px !important;
+}
+.offset-gutter {
+	margin-right: -16px;
+}
+
+#slider {
+	float:none;
+}
+
+.textwidget {
+	padding: 0px 15px 0 25px;
+}
+
+.widget_title {
+	padding: 10px 0;
+	margin-bottom: 15px;
+	background-color: #3478b6;
+}
+
+.widget_title h5 {
+	color: #FFF;
+}
+
+#sidebar h5 {
+	padding-left: 20px;
+	margin-top: 0;
+	margin-bottom:0;
+}
+
+.panel.callout a {
+	color:#663333;
+}
+
+body.site-25 .slide h6.yellow {
+	display: none;
+}
+
+body.site-18 .with_frm_style p.submit {
+	display: none;
+}
+
+body.site-18 #frm_form_20_container p.submit {
+	display: block !important;
+}
+
+
+.content img {
+	margin-right: 25px;
+}
+.wp-post-image {
+	margin-bottom: 10px;
+}
+
+@media print {
+	header,
+	footer {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 970px) {
+.orbit-container .orbit-slides-container img {
+	min-width: 151%;
+}
+}
