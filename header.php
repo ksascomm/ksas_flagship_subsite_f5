@@ -26,7 +26,7 @@
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-    <script src="<?php echo get_template_directory_uri() ?>/assets/javascripts/lte-ie7.js"></script>
+    <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/lte-ie7.js"></script>
   <![endif]-->
   <?php include_once("parts-analytics.php") ?> 
 </head>
