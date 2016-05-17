@@ -12,8 +12,7 @@
   <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri() ?>/assets/images/apple-touch-icon-57x57-precomposed.png" />
   
   <!-- CSS Files: All pages -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/app.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/app.min.css">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/style.css">
   
   <!-- CSS Files: Conditionals -->
