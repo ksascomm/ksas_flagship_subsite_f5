@@ -68,7 +68,7 @@ Template Name: Research Profile Search Results
 					<form method="post" action="<?php echo site_url('/results'); ?>">
 						<div class="small-12 columns">
 						    <input type="text" name="keyword" placeholder="Search by name or keyword" />
-						    <label class="bold inline">Affiliation:</label>
+						    <label for="affiliation" class="bold inline">Affiliation:</label>
 						    <select name="affiliation" class="inline" style="width: 50%;">
 						    <option value="">Any Affiliation</option>
 						    <?php $taxonomies = array('academicdepartment', 'affiliation'); 
@@ -80,14 +80,15 @@ Template Name: Research Profile Search Results
 				        
 										} ?>
 						    </select>
-									    <select name="award" class="inline" style="width: 25%;">
-									    <option value="">Any Year</option>
-									    	<?php $award_years = get_meta_values('ecpt_class_year');
-									    	echo $award_years;
-									    		foreach ($award_years as $award_year) {
-										    		echo '<option value"' . $award_year . '">' . $award_year . '</option>';
-									    		} ?>
-									    </select>
+						    <label for="award" class="screen-reader-text">Select Year</label>
+						    <select name="award" class="inline" style="width: 25%;">
+						    <option value="">Any Year</option>
+						    	<?php $award_years = get_meta_values('ecpt_class_year');
+						    	echo $award_years;
+						    		foreach ($award_years as $award_year) {
+							    		echo '<option value"' . $award_year . '">' . $award_year . '</option>';
+						    		} ?>
+						    </select>
 						    <input type="submit" class="icon-search" value="Search" />
 						</div>
 					</form>
