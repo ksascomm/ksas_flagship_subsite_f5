@@ -18,7 +18,7 @@
   <!-- CSS Files: Conditionals -->
   
   <!-- Modernizr and Jquery Script -->
-  <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/modernizr-min.js"></script>
+  <script src="<?php echo get_template_directory_uri() ?>/assets/js/vendor/modernizr.min.js"></script>
   <?php wp_enqueue_script('jquery'); ?> 
   <?php wp_head(); ?>
   <?php $theme_option = flagship_sub_get_global_options(); ?>
