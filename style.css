@@ -8,7 +8,7 @@ Version: 		2.0
 */
 
 body.home h1, body.home h2, body.home h3, body.home h4, .isotope h3 {
-	color: #3478b6;
+	color: #005eb8;
 }
 
 ul.nav li:before {
@@ -136,7 +136,7 @@ ul.breadcrumbs a{
 .widget_title {
 	padding: 10px 0;
 	margin-bottom: 15px;
-	background-color: #3478b6;
+	background-color: #005eb8;
 }
 
 .widget_title h5 {
