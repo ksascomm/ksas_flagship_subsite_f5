@@ -27,10 +27,10 @@ $paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
 					if ( $theme_option['flagship_sub_profile_search']  == '1' ) { ?>
 							<fieldset>
 								<form method="post" action="<?php echo site_url('/results'); ?>">
-									<div class="twelve columns">
+									<div class="small-12 columns">
 									    <input type="text" name="keyword" placeholder="Search by name or keyword" />
 									    <label for="affiliation" class="bold inline">Affiliation:</label>
-									    <select id="affilition" name="affiliation" class="inline" style="width: 50%;">
+									    <select id="affiliation" name="affiliation" class="inline" style="width: 50%;">
 									    <option value="">Any Affiliation</option>
 									    <?php $taxonomies = array('academicdepartment', 'affiliation'); 
 									    $terms = get_terms($taxonomies, array(
