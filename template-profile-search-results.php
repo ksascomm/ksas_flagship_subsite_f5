@@ -5,7 +5,7 @@ Template Name: Research Profile Search Results
 ?>
 <?php get_header(); ?>
 
-<main class="row sidebar_bg radius10" id="opp" role="main">
+<main class="row sidebar_bg radius10" id="opp">
 <?php locate_template('parts-nav-sidebar.php', true, false); ?>	
 	<div class="small-12 medium-8 medium-pull-4 columns wrapper radius-left offset-topgutter">
 		

@@ -16,7 +16,7 @@ $paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
 					)); 
 					set_transient( 'research_profile_index_query_' . $paged, $research_profile_index_query, 2592000 );
 			} 	?>
-<main class="row sidebar_bg radius10" id="opp" role="main">
+<main class="row sidebar_bg radius10" id="opp">
 <?php locate_template('parts-nav-sidebar.php', true, false); ?>	
 	<div class="small-12 medium-8 medium-pull-4 columns wrapper radius-left offset-topgutter">
 	<!--- MAIN CONTENT -->

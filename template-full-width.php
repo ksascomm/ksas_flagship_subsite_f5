@@ -4,7 +4,7 @@ Template Name: Full Width
 */
 ?>
 <?php get_header(); ?>
-<main class="row wrapper radius10" id="opp" role="main">
+<main class="row wrapper radius10" id="opp">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="small-12 columns radius10 offset-topgutter">
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
