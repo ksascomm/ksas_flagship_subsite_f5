@@ -57,7 +57,7 @@
 						<p class="bold"><a href="<?php echo get_post_meta($post->ID, 'ecpt_research_pdf', true); ?>">Download research materials</a></p>
 					<?php endif; ?>
 					<?php if ( get_post_meta($post->ID, 'ecpt_video', true) ) : ?>
-						<p class="bold"><a href="#" data-reveal-id="modal_research_video"><span class="icon-video"></span>Watch research video</a></p>
+						<p class="bold"><a href="#" data-reveal-id="modal_research_video"><span class="icon-video-camera2"></span>Watch research video</a></p>
 					<?php endif; ?>
 					</div>
 				</div>

@@ -25,7 +25,7 @@
 									<div class="middle">
 										<h3 class="white"><?php the_title(); ?></h3>
 										<h5 class="white italic"><?php $tagline = get_post_meta($post->ID, 'ecpt_pull_quote', true); echo strip_tags($tagline); ?></h5>
-										<h6 class="yellow">Read More <span class="icon-arrow-right-2"></span></h6>
+										<h6 class="yellow">Read More <span class="icon-arrow-right14"></span></h6>
 									</div>
 								</summary>
 					</div>

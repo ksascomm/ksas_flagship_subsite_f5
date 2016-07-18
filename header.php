@@ -61,7 +61,8 @@
 					'container' => 'nav',
 					'container_id' => 'main_nav', 
 					'container_class' => 'small-12 columns',
-					'depth' => 2 )); ?> 
+					'depth' => 2,
+					'walker' => new foundation_navigation() )); ?> 
 			</div>
 			<?php //switch back to the current site
 			switch_to_blog($current_blog_id);

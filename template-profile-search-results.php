@@ -133,7 +133,7 @@ Template Name: Research Profile Search Results
 							
 							<?php if ( get_post_meta($post->ID, 'ecpt_article_list', true) || get_post_meta($post->ID, 'ecpt_research_pdf', true) ) : ?><span class="icon-newspaper"></span><?php endif; ?>
 							
-							<?php if ( get_post_meta($post->ID, 'ecpt_video', true) ) : ?><span class="icon-video"></span><?php endif; ?>
+							<?php if ( get_post_meta($post->ID, 'ecpt_video', true) ) : ?><span class="icon-video-camera2"></span><?php endif; ?>
 						</h6>
 
 						<?php if ( get_post_meta($post->ID, 'ecpt_award_name', true) ) : ?><p class="bold no-margin"><?php echo get_post_meta($post->ID, 'ecpt_award_name', true); ?></p><?php endif; ?>
