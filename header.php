@@ -37,7 +37,7 @@
 </head>
 <?php global $blog_id;
 	$site_id = $blog_id; ?>
-<body class="<?php echo $theme_option['flagship_sub_parent_id']; ?> sub-site site-<?php echo $site_id; ?> " onLoad="viewport()">
+<body class="<?php echo $theme_option['flagship_sub_parent_id']; ?> sub-site site-<?php echo $site_id; ?> ">
 	<header>
 		<div id="mobile-nav">
 	  		<div class="row">
@@ -47,7 +47,7 @@
 	  		</div>
 		</div>
 		<div id="desktop-nav">
-				<?php get_template_part( 'parts', 'offcanvas' ); ?>
+				<?php get_template_part( '/parts/offcanvas-nav' ); ?>
 			<?php //Switch to krieger.jhu.edu for navigation menus
 				global $blog_id;
 				$current_blog_id = $blog_id;
