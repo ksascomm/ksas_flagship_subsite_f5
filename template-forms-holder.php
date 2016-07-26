@@ -39,7 +39,7 @@ Template Name: Form Holder
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <?php include_once("parts-analytics.php") ?> 
+  <?php include_once("analytics.php") ?> 
 </head>
 <style>
 body {background: none;}

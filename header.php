@@ -33,7 +33,7 @@
 		<?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.'); ?>	
 		</div>		
 	<![endif]-->
-  <?php include_once("parts-analytics.php") ?> 
+  <?php include_once("analytics.php") ?> 
 </head>
 <?php global $blog_id;
 	$site_id = $blog_id; ?>

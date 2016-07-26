@@ -39,7 +39,8 @@
   	</div>
   </footer>
 
-  <?php locate_template('parts-script-initiators.php', true, false); ?>
+  <?php wp_footer(); 
+  locate_template('/parts/script-initiators.php', true, false); ?>
   
   <?php $theme_option = flagship_sub_get_global_options();
 
@@ -92,7 +93,3 @@
 			});
 		</script>
 <?php } ?>
-
-<?php if ( is_front_page()) { ?>
-
-<?php } wp_footer(); ?>

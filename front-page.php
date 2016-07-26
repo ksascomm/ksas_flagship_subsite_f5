@@ -5,7 +5,8 @@
 				$sub_research_slider_query = new WP_Query(array(
 				'post_type' => 'profile',
 				'category_name' => 'homepage',
-				'order' => 'rand',
+				'orderby' => 'rand', 
+				'order' => 'ASC',
 				'posts_per_page' => '5'));
 			set_transient( 'sub_research_slider_query', $sub_research_slider_query, 86400 ); }
 ?>
@@ -13,7 +14,13 @@
 <div class="row hide-for-small-only">
 	<div class="slideshow-wrapper">
 		<div class="preloader"></div>
-		<ul id="slider" data-orbit data-options="animation: fade; animation_speed:2000; timer:true; timer_speed:5000; navigation_arrows:false; bullets:false; slide_number:false;">
+
+
+		<?php if ($sub_research_slider_query->post_count == 1) : ?>
+				<ul id="slider" data-orbit data-options="navigation_arrows:false; bullets:false; slide_number:false;">
+			<?php else :?> 
+				<ul id="slider" data-orbit data-options="animation: fade; animation_speed:2000; timer:false; timer_speed:4000; navigation_arrows:true; bullets:false; slide_number:false;">
+			<?php endif; ?>
 
 		<?php while ($sub_research_slider_query->have_posts()) : $sub_research_slider_query->the_post(); ?>
 			<li>
@@ -38,7 +45,7 @@
 </div>
 <?php endif; ?>
 <div class="row sidebar_bg radius10">
-	<?php locate_template('parts-nav-sidebar.php', true, false); ?>	
+	<?php locate_template('/parts/nav-sidebar.php', true, false); ?>	
 	<div class="small-12 medium-8 medium-pull-4 columns wrapper toplayer">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article>

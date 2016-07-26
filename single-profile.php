@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row sidebar_bg radius10">
-<?php locate_template('parts-nav-sidebar.php', true, false); ?>	
+<?php locate_template('/parts/nav-sidebar.php', true, false); ?>	
 	<main class="small-12 medium-8 medium-pull-4 columns wrapper radius-left">
 	
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
