@@ -1,5 +1,5 @@
 	<aside class="small-12 medium-4 medium-push-8 columns toplayer" id="sidebar"> <!-- Begin Sidebar -->
-		<div class="blue_bg radius-topright offset-gutter sidebar_header">
+		<div class="blue_bg radius-topright offset-gutter" id="sidebar_header">
 			<h5 class="white"><a href="<?php echo site_url(); ?>" title="<?php bloginfo('name'); ?>" class="white"><?php bloginfo('name'); ?></a></h5>
 		</div>
 		<!--Begin Site Navigation Links -->
