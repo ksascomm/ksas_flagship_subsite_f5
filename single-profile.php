@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
 <div class="row sidebar_bg radius10">
-<?php locate_template('/parts/nav-sidebar.php', true, false); ?>	
-	<main class="small-12 medium-8 medium-pull-4 columns wrapper radius-left">
+	<main class="small-12 large-8 columns wrapper radius-left offset-topgutter">		
 	
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 		<div class="row">
 			<h1><?php the_title(); ?></h1>
 			<p class="no-margin">
@@ -35,11 +35,13 @@
 			    <h5 class="black"><?php echo get_post_meta($post->ID, 'ecpt_award_name', true); ?></h5>
 			<?php endif; ?>
 		</div>
+
 		<div class="row">
 			<?php if ( has_post_thumbnail() ) { the_post_thumbnail('slider', array('class' => 'floatleft')); } ?>
 			<h3>Project Description</h3>
 			<?php the_content(); ?>
 		</div>
+
 		<div class="row">
 			<?php if ( get_post_meta($post->ID, 'ecpt_article_list', true) ) : ?>
 			<div class="small-12 medium-6 columns no-gutter">
@@ -49,6 +51,7 @@
 					</div>
 			</div>
 			<?php endif; ?>
+
 			<?php if ( get_post_meta($post->ID, 'ecpt_video', true) || get_post_meta($post->ID, 'ecpt_research_pdf', true)) : ?>
 				<div class="small-12 medium-6 columns no-gutter">
 					<h5>Multimedia</h5>
@@ -62,11 +65,15 @@
 					</div>
 				</div>
 			<?php endif; ?>
-<?php endwhile; endif; ?>
+		</div>
+
+	<?php endwhile; endif; ?>
+
 	</main>
 
-</div>
-<?php if ( get_post_meta($post->ID, 'ecpt_video', true) ) : ?>
+<?php locate_template('/parts/nav-sidebar.php', true, false); ?>
+
+	<?php if ( get_post_meta($post->ID, 'ecpt_video', true) ) : ?>
 		<div id="modal_research_video" class="reveal-modal large black_bg">
 			<div class="flex-video">
 				<?php $video_link = get_post_meta($post->ID, 'ecpt_video', true);
@@ -77,5 +84,8 @@
 			</div>
 			<a class="close-reveal-modal">&#215;</a>
 		</div>	
-<?php endif; ?>
+	<?php endif; ?>
+
+</div>
+
 <?php get_footer(); ?>

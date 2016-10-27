@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row sidebar_bg radius10" id="opp">
-	<div class="small-12 medium-8 medium-pull-4 columns wrapper radius-left offset-topgutter">
+	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="row">		
 		<section class="small-12 columns">
@@ -19,6 +19,6 @@
 	</div>
 	<?php endwhile; endif; ?>		
 	</div>	<!-- End main content (left) section -->
-<?php locate_template('parts-nav-sidebar.php', true, false); ?>	
+		<?php locate_template('/parts/nav-sidebar.php', true, false); ?>
 </div> 
 <?php get_footer(); ?> 

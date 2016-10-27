@@ -50,31 +50,92 @@ span.attribute {
 	margin-right: 25px;
 }
 
-#caption {
-	min-height: 425px;
-	position: absolute;
-	bottom:0;
-	width: 34%;
+#slider {
+  background: url(../ksas_flagship_f5/assets/images/foundation/orbit/loading.gif) center center no-repeat;
+  height: 300px;
+}
+#slider.orbit {
+  background: none;
+}
+
+.orbit-caption {
+  background-color: inherit !important;
+}
+
+ul.orbit-bullets {
+  top: 405px;
+  width: 527px;
+  left: 3px;
+  margin-left: 0 !important;
+}
+ul.orbit-bullets li {
+  margin-right: 12px;
+  margin-left: 0;
+}
+ul.orbit-bullets li:last-child {
+  margin-right: 0;
+  margin-left: 1px;
+}
+ul.orbit-bullets li.has-thumb {
+  width: 95px;
+  height: 95px;
+}
+
+div.orbit-wrapper div.timer, .orbit-timer {
+  display: none;
+}
+
+.caption.vertical {
+  min-height: 425px;
+  position: relative;
+  bottom: 0;
+}
+.caption.vertical .middle {
+  padding-top: 100px;
+  width: 300px;
+}
+.caption.horizontal {
+  position: absolute;
+  bottom: 0;
+  max-height: 100px;
+  padding: 15px;
 }
 
 .slide summary {
-	background: rgb(0,0,0);
-	background: rgba(0,0,0,.9);
+  background: black;
+  background: rgba(0, 0, 0, 0.9);
 }
-
-.slide h6 {
-	color: #dbb003;
-	font-size: 100%;
+.slide summary h1 {
+  font-size: 1.6875rem;
+}
+.slide summary .yellow {
+  color: #dbb003 !important;
+}
+.slide summary p {
+  vertical-align: top;
+  line-height: 1.4em;
+}
+.slide summary .icon-arrow-right-2 {
+  padding-left: 6px;
 }
 
 .orbit div.orbit-slide {
-	left:0 !important;
+  left: 0 !important;
 }
 
-.middle {
-	vertical-align: middle;
-	margin-top: 25%;
+.orbit-wrapper {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
+
+.orbit {
+  margin-bottom: 0;
+}
+
+.orbit-container .orbit-slides-container > * .orbit-caption {
+  padding: inherit;
+}
+
 
 body.sub-site .orbit-wrapper {
 	-webkit-border-top-right-radius: 	10px;
