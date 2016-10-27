@@ -17,7 +17,6 @@ $paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
 					set_transient( 'research_profile_index_query_' . $paged, $research_profile_index_query, 2592000 );
 			} 	?>
 <main class="row sidebar_bg radius10" id="opp">
-	<?php locate_template('/parts/nav-sidebar.php', true, false); ?>	
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">
 		<!--- MAIN CONTENT -->
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -133,5 +132,6 @@ $paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
 		</div>
 
 	</div>	<!-- End main content (left) section -->
+		<?php locate_template('/parts/nav-sidebar.php', true, false); ?>	
 </main> 
 <?php get_footer(); ?> 
