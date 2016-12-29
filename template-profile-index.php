@@ -27,7 +27,10 @@ $paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
 							<fieldset>
 								<form method="post" action="<?php echo site_url('/results'); ?>">
 									<div class="small-12 columns">
-									    <input type="text" name="keyword" placeholder="Search by name or keyword" />
+										<input type="text" name="keyword" id="id_search" placeholder="Search by name or keyword"  /> 
+											<label for="id_search" class="screen-reader-text">
+												Search by name or keyword
+											</label>									    
 									    <label for="affiliation" class="bold inline">Affiliation:</label>
 									    <select id="affiliation" name="affiliation" class="inline" style="width: 50%;">
 									    <option value="">Any Affiliation</option>
