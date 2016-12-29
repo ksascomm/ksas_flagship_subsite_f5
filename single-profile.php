@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
 <div class="row sidebar_bg radius10">
-	<main class="small-12 large-8 columns wrapper radius-left offset-topgutter">		
+	<main class="small-12 large-8 columns wrapper radius-left offset-topgutter" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">		
 	
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 		<div class="row">
-			<h1><?php the_title(); ?></h1>
+			<h1 itemprop="headline"><?php the_title(); ?></h1>
 			<p class="no-margin">
 			    <?php if ( get_post_meta($post->ID, 'ecpt_class_year', true) ) : ?>Year:&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_class_year', true);?>&nbsp;&nbsp;&nbsp;<?php endif;?>
 			    <?php 	//Get the Academic Department Names

@@ -37,8 +37,8 @@
 </head>
 <?php global $blog_id;
 	$site_id = $blog_id; ?>
-<body class="<?php echo $theme_option['flagship_sub_parent_id']; ?> sub-site site-<?php echo $site_id; ?> ">
-	<header>
+<body class="<?php echo $theme_option['flagship_sub_parent_id']; ?> sub-site site-<?php echo $site_id; ?> " itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
 		<div id="mobile-nav">
 	  		<div class="row">
 		        <div class="small-12 columns">
@@ -53,7 +53,7 @@
 				$current_blog_id = $blog_id;
 				switch_to_blog(1);
 			?>
-			<div class="row hide-for-print" role="navigation">
+			<div class="row hide-for-print">
 				<?php wp_nav_menu( array( 
 					'theme_location' => 'main_nav', 
 					'menu_class' => '', 
@@ -68,4 +68,4 @@
 			switch_to_blog($current_blog_id);
 			?>
 		</div>
-		</header>
+	</header>

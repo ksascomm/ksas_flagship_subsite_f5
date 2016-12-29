@@ -16,7 +16,7 @@ $paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
 					)); 
 					set_transient( 'research_profile_index_query_' . $paged, $research_profile_index_query, 2592000 );
 			} 	?>
-<main class="row sidebar_bg radius10" id="opp">
+<main class="row sidebar_bg radius10" id="opp" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">
 		<!--- MAIN CONTENT -->
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -49,7 +49,7 @@ $paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
 										    		echo '<option value"' . $award_year . '">' . $award_year . '</option>';
 									    		} ?>
 									    </select>
-									    <input type="submit" class="icon-search" value="Search" />
+									    <input type="submit" class="search" value="Search" />
 									</div>
 								</form>
 							</fieldset>
@@ -60,10 +60,10 @@ $paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
 				<?php while ($research_profile_index_query->have_posts()) : $research_profile_index_query->the_post(); ?>
 					<li class="person">
 						<div class="row">
-							<article class="small-11 columns centered">
-								<h2 class="no-margin">
+							<article class="small-11 columns centered" aria-label="<?php the_title();?> article" id="post-<?php the_ID(); ?>">
+								<h3 class="no-margin">
 									<a href="<?php the_permalink();?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-								</h2>	
+								</h3>	
 							
 								<p class="no-margin">
 									<?php if ( get_post_meta($post->ID, 'ecpt_class_year', true) ) : ?>

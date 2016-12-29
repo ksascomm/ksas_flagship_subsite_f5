@@ -11,7 +11,7 @@
 			set_transient( 'sub_research_slider_query', $sub_research_slider_query, 86400 ); }
 ?>
 <?php if ($sub_research_slider_query->have_posts()) : ?>
-<div class="row hide-for-small-only">
+<div class="row hide-for-small-only" role="marquee">
 	<div class="slideshow-wrapper">
 		<div class="preloader"></div>
 
@@ -23,8 +23,8 @@
 
 				<?php while ($sub_research_slider_query->have_posts()) : $sub_research_slider_query->the_post(); ?>
 					<li>
-						<a href="<?php the_permalink(); ?>">
-							<div class="slide">
+						<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">
+							<article class="slide" aria-labelledby="post-<?php the_ID(); ?>">
 								<?php the_post_thumbnail('slider', array('class' => 'radius-top')); ?>	
 								<div class="orbit-caption">						
 									<summary class="small-4 small-offset-8 columns black_bg vertical radius-topright caption">
@@ -35,7 +35,7 @@
 										</div>
 									</summary>
 								</div>
-							</div>
+							</article>
 						</a>
 					</li>
 				<?php endwhile; ?>								
@@ -44,12 +44,10 @@
 </div>
 <?php endif; ?>
 <div class="row sidebar_bg radius10">
-	<div class="small-12 large-8 columns wrapper toplayer">
+	<main class="small-12 large-8 columns wrapper toplayer">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<article>
-				<h1><?php the_title();?></h1>	
+			<h1><?php the_title();?></h1>	
 				<?php the_content(); ?>			
-			</article>
 		<?php endwhile; endif; ?>	
 		
 		
@@ -68,11 +66,13 @@
 		<?php endif; while ($sub_news_query->have_posts()) : $sub_news_query->the_post(); ?>
 		
 		<div class="row">		
-			<article class="small-12 columns">
-				<h5 class="black"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h5>
+			<article class="small-12 columns" aria-labelledby="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+				<h5 class="black">
+					<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title();?></a>
+				</h5>
 					<?php if ( has_post_thumbnail()) : ?> 
 						<div class="floatright">
-							<?php the_post_thumbnail('rss'); ?>
+							<?php the_post_thumbnail('rss', array('itemprop' => 'image')); ?>
 						</div>
 					<?php endif; ?>
 					<summary><?php the_excerpt(); ?></summary>
@@ -81,7 +81,7 @@
 		</div>
 		<?php endwhile; ?>
 		
-	</div>	<!-- End main content (left) section -->
+	</main>	<!-- End main content (left) section -->
 	<?php locate_template('/parts/nav-sidebar.php', true, false); ?>	
 </div> <!-- End #landing -->
 <?php get_footer(); ?>

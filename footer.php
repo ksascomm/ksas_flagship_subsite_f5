@@ -1,4 +1,4 @@
-  <footer>
+  <footer itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 	<?php //Switch to krieger.jhu.edu for navigation menus
 		global $switched;
 		switch_to_blog(1);
