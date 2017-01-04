@@ -53,17 +53,18 @@
 				$current_blog_id = $blog_id;
 				switch_to_blog(1);
 			?>
-			<div class="row hide-for-print">
+			<nav class="row hide-for-print" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" aria-label="Main Menu">
 				<?php wp_nav_menu( array( 
 					'theme_location' => 'main_nav', 
 					'menu_class' => '', 
-					'fallback_cb' => 'foundation_page_menu', 
-					'container' => 'nav',
+					'container' => 'div',
 					'container_id' => 'main_nav', 
 					'container_class' => 'small-12 columns',
 					'depth' => 2,
-					'walker' => new foundation_navigation() )); ?> 
-			</div>
+					'fallback_cb' => 'foundation_page_menu',
+					'walker' => new foundation_navigation(),
+					 )); ?> 
+			</nav>
 			<?php //switch back to the current site
 			switch_to_blog($current_blog_id);
 			?>
