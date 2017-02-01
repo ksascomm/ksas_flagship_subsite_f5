@@ -6,7 +6,6 @@ Template Name: Research Profile Search Results
 <?php get_header(); ?>
 
 <main class="row sidebar_bg radius10" id="opp" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-<?php locate_template('/parts/nav-sidebar.php', true, false); ?>	
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">		
 		<?php if(empty($_POST['keyword']) == false) {
 			$keyword = $_POST['keyword'];
@@ -156,5 +155,7 @@ Template Name: Research Profile Search Results
 				<?php flagship_pagination($research_search_results_query->max_num_pages); ?>		
 			</div>
 	</div>	<!-- End main content (left) section -->
+	<?php locate_template('/parts/nav-sidebar.php', true, false); ?>	
+
 </main> 
 <?php get_footer(); ?> 
