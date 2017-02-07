@@ -11,7 +11,7 @@
 			set_transient( 'sub_research_slider_query', $sub_research_slider_query, 86400 ); }
 ?>
 <?php if ($sub_research_slider_query->have_posts()) : ?>
-<div class="row hide-for-small-only" role="marquee">
+<div class="row hide-for-small-only" role="region" aria-label="Highlighted <?php echo get_bloginfo( 'title' ); ?> Projects">
 	<div class="slideshow-wrapper">
 		<div class="preloader"></div>
 
