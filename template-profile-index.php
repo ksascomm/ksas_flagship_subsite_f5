@@ -63,9 +63,9 @@ $paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
 				<?php while ($research_profile_index_query->have_posts()) : $research_profile_index_query->the_post(); ?>
 					<li class="person">
 						<div class="row">
-							<article class="small-11 columns centered" aria-label="<?php the_title();?> article" id="post-<?php the_ID(); ?>">
+							<article class="small-11 columns centered" aria-labelledby="post-<?php the_ID(); ?>">
 								<h3 class="no-margin">
-									<a href="<?php the_permalink();?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+									<a  id="post-<?php the_ID(); ?>" href="<?php the_permalink();?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 								</h3>	
 							
 								<p class="no-margin">
