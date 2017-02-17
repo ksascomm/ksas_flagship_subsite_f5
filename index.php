@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="row sidebar_bg radius10" id="opp" role="main" itemprop="mainEntity" itemscope itemtype="http://schema.org/Blog">
+<div class="row sidebar_bg radius10" id="page" role="main" itemprop="mainEntity" itemscope itemtype="http://schema.org/Blog">
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="row">		

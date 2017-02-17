@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<div class="row sidebar_bg radius10" id="opp">
+	<div class="row sidebar_bg radius10" id="page">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<main class="small-12 large-8 columns wrapper radius-left offset-topgutter" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 				<?php locate_template('/parts/nav-breadcrumbs.php', true, false); ?>	

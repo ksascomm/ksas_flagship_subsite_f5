@@ -5,7 +5,7 @@ Template Name: Research Profile Search Results
 ?>
 <?php get_header(); ?>
 
-<main class="row sidebar_bg radius10" id="opp" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<main class="row sidebar_bg radius10" id="page" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
 	<div class="small-12 large-8 columns wrapper radius-left offset-topgutter">		
 		<?php if(empty($_POST['keyword']) == false) {
 			$keyword = $_POST['keyword'];
