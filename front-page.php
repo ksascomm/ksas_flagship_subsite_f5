@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<main id="page">
+
 <?php
 	if ( false === ( $sub_research_slider_query = get_transient( 'sub_research_slider_query' ) ) ) {
 				// It wasn't there, so regenerate the data and save the transient
@@ -11,7 +13,7 @@
 			set_transient( 'sub_research_slider_query', $sub_research_slider_query, 86400 ); }
 ?>
 <?php if ($sub_research_slider_query->have_posts()) : ?>
-<main id="page">
+
 <div class="row hide-for-small-only" aria-label="Highlighted <?php echo get_bloginfo( 'title' ); ?> Projects">
 	<div class="slideshow-wrapper">
 		<div class="preloader"></div>
