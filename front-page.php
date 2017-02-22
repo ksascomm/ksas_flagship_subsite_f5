@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="page">
+<main>
 
 <?php
 	if ( false === ( $sub_research_slider_query = get_transient( 'sub_research_slider_query' ) ) ) {
@@ -45,7 +45,7 @@
 	</div>
 	<?php endif; ?>
 	<div class="row sidebar_bg radius10">
-		<div class="small-12 large-8 columns wrapper toplayer">
+		<div class="small-12 large-8 columns wrapper toplayer" id="page">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h1><?php the_title();?></h1>
 			<?php the_content(); ?>
