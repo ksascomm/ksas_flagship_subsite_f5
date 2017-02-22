@@ -38,8 +38,8 @@
 <?php global $blog_id;
 	$site_id = $blog_id; ?>
 <body class="<?php echo $theme_option['flagship_sub_parent_id']; ?> sub-site site-<?php echo $site_id; ?> " itemscope="itemscope" itemtype="http://schema.org/WebPage">
-	<a href="#page" class="skipLink">Skip to main content</a>
 	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
+	<a href="#page" class="skipLink">Skip to main content</a>
 		<div id="mobile-nav">
 	  		<div class="row">
 		        <div class="small-12 columns">
