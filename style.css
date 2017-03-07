@@ -235,7 +235,6 @@ body.site-18 #frm_form_20_container p.submit {
 }
 
 @media print {
-	header,
 	footer {
 		display: none;
 	}

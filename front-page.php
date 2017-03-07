@@ -14,7 +14,7 @@
 ?>
 <?php if ($sub_research_slider_query->have_posts()) : ?>
 
-<div class="row hide-for-small-only" aria-label="Highlighted <?php echo get_bloginfo( 'title' ); ?> Projects">
+<div class="row hide-for-small-only hide-for-print" aria-label="Highlighted <?php echo get_bloginfo( 'title' ); ?> Projects">
 	<div class="slideshow-wrapper">
 		<div class="preloader"></div>
 		<?php if ($sub_research_slider_query->post_count == 1) : ?>

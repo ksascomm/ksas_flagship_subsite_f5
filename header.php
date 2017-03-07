@@ -13,7 +13,7 @@
   
   <!-- CSS Files: All pages -->
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/app.min.css">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/style.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/style.min.css">
   
   <!-- CSS Files: Conditionals -->
   
@@ -40,14 +40,18 @@
 <body class="<?php echo $theme_option['flagship_sub_parent_id']; ?> sub-site site-<?php echo $site_id; ?> " itemscope="itemscope" itemtype="http://schema.org/WebPage">
 	<header itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
 	<a href="#page" class="skipLink">Skip to main content</a>
-		<div id="mobile-nav">
+	<div class="print-only">
+		<img src="<?php echo get_template_directory_uri() ?>/assets/images/krieger.small.horizontal.blue.jpg" alt="krieger logo">
+		<h1><?php bloginfo('name'); ?></h1>
+	</div>	
+		<div id="mobile-nav" class="hide-for-print">
 	  		<div class="row">
 		        <div class="small-12 columns">
 		  			<div class="mobile-logo"><a href="<?php echo network_site_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/images/jhu.png" alt="jhu logo"></a></div>
 		  		</div>
 	  		</div>
 		</div>
-		<div id="desktop-nav">
+		<div id="desktop-nav" class="hide-for-print">
 				<?php get_template_part( '/parts/offcanvas-nav' ); ?>
 			<?php //Switch to krieger.jhu.edu for navigation menus
 				global $blog_id;
